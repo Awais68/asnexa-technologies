@@ -1,0 +1,2 @@
+const words=["AI BUSINESS AUTOMATION","AGENTIC AI SYSTEMS","CUSTOMER EXPERIENCE","FULL-STACK DEVELOPMENT","DIGITAL PRODUCTS","HUMAN-CENTERED ENGINEERING"];
+export function BrandMarquee(){return <div className="brand-marquee" aria-label="AsNexa capabilities"><div className="marquee-track">{[0,1,2,3].map(n=><div className="marquee-set" key={n} aria-hidden={n>0}>{words.map((word,i)=><span key={word+n}>{word}<i>✳</i></span>)}</div>)}</div></div>}
