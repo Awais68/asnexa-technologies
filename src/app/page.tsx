@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowDown, ArrowRight, ArrowUpRight, Bot, Boxes, Code2, Headphones, Workflow, ShieldCheck, ScanSearch, PencilRuler, Rocket, RefreshCw } from "lucide-react";
+import { ArrowDown, ArrowRight, ArrowUpRight, Bot, Boxes, Code2, Headphones, Workflow, ScanSearch, PencilRuler, Rocket, RefreshCw } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
 import { ServiceVisual } from "@/components/service-visual";
 
@@ -34,7 +34,6 @@ export default function Home() {
     name: "AsNexa Technologies",
     url: "https://asnexatech.com",
     description: "AI automation and full-stack software development for growing businesses.",
-    email: "hello@asnexatech.com",
     knowsAbout: ["AI business automation", "AI agents", "Customer support automation", "Full-stack development", "AI-powered applications"],
   };
 
