@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 
 const serviceLinks = [
   ["AI Business Automation", "/services/ai-business-automation"],
@@ -16,6 +16,6 @@ export function SiteFooter() {
       <div><h3 className="text-xs font-bold uppercase tracking-[.15em] text-[var(--ice)]">Explore</h3><div className="mt-5 flex flex-col gap-4 text-sm text-[var(--muted)]"><Link href="/services" className="hover:text-white">Services</Link><Link href="/industries" className="hover:text-white">Industries</Link><Link href="/work" className="hover:text-white">Our approach</Link><Link href="/about" className="hover:text-white">About AsNexa</Link><Link href="/contact" className="hover:text-white">Contact</Link></div></div>
       <div><h3 className="text-xs font-bold uppercase tracking-[.15em] text-[var(--ice)]">Services</h3><div className="mt-5 flex flex-col gap-4 text-sm text-[var(--muted)]">{serviceLinks.map(([label, href]) => <Link key={href} href={href} className="hover:text-white">{label}</Link>)}</div></div>
     </div>
-    <div className="border-t border-[var(--border)]"><div className="container flex flex-col justify-between gap-3 py-5 text-[11px] text-[var(--muted)] sm:flex-row"><span>© {new Date().getFullYear()} AsNexa Technologies. All rights reserved.</span><span>Built with clarity. Designed for real work.</span></div></div>
+    <div className="border-t border-[var(--border)]"><div className="container flex flex-col justify-between gap-3 py-5 text-[11px] text-[var(--muted)] sm:flex-row"><span>© 2026 AsNexa Technologies. All rights reserved.</span><span>Built with clarity. Designed for real work.</span></div></div>
   </footer>;
 }
