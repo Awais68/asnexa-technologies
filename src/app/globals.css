@@ -72,3 +72,5 @@
 @media(prefers-reduced-motion:reduce){.marquee-track{animation:none}.hero-photo-image{transform:none!important}}
 
 .brand-logo-mark{display:block;flex:0 0 auto;width:44px;height:44px;object-fit:contain;border-radius:7px;background:#09070b}.site-header .brand{gap:10px}.brand-word b{font-family:var(--font-sans),Arial,sans-serif;font-size:18px;font-weight:850;letter-spacing:.13em;color:#211729}.brand-word small{font-family:var(--font-sans),Arial,sans-serif;font-size:7px;letter-spacing:.32em;color:#82758a}.site-footer .brand-logo-mark{width:52px;height:52px}.site-footer .brand-word b{font-size:20px}
+
+.hero-section{background:linear-gradient(110deg,#fcf9fd 0%,#f7f0fa 55%,#f0e3f7 100%)}.hero-wash{background:#ead4f7}.principles-section{background:#f1e5fa}.closing-card{background:#f1e5fa}.closing-orb,.closing-orb:after{border-color:#d9bce9}.outcome-list,.outcome-row{border-color:#e4d8eb}.hero-bottom-line{background:#d3b5e6}.hero-proof{border-color:#e7ddec}.hero-float,.hero-art-label{border-color:#e7ddec}
