@@ -24,3 +24,49 @@
 @media(max-width:650px){.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}}
 
 :root{--blue:#9630d2;--blue-soft:#f1e5fa;--ice:#33243b;--steel:#756b7d;--border:#e7ddec;--surface:#fff}
+
+
+/* Photography-first AsNexa experience */
+.brand-full-logo{display:block;width:174px;height:56px;object-fit:contain;object-position:left center}
+.brand-marquee{height:48px;overflow:hidden;background:#24172e;color:#f7effb;border-bottom:1px solid #ffffff18;display:flex;align-items:center}
+.marquee-track{display:flex;width:max-content;animation:marqueeMove 48s linear infinite}
+.marquee-set{display:flex;align-items:center;flex-shrink:0}
+.marquee-set>span{display:inline-flex;align-items:center;gap:22px;padding:0 24px;font-size:8px;font-weight:700;letter-spacing:.2em;white-space:nowrap}
+.marquee-set i{font-size:13px;font-style:normal;color:#c45af0}
+.brand-marquee:hover .marquee-track{animation-play-state:paused}
+@keyframes marqueeMove{to{transform:translateX(-50%)}}
+.hero-art{min-height:500px;display:block;align-self:stretch;padding:8px 0}
+.hero-photo-frame{position:relative;height:480px;width:100%;overflow:hidden;border-radius:20px 20px 20px 80px;background:#24172e;box-shadow:0 25px 65px #2a19351c}
+.hero-photo-image{position:absolute;inset:0;background-image:url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1500&q=88");background-size:cover;background-position:center;will-change:transform}
+.hero-photo-shade{position:absolute;inset:0;background:linear-gradient(180deg,#20152b00 35%,#20152bc9 100%),linear-gradient(90deg,#24172e18,#24172e00 60%)}
+.hero-photo-caption{position:absolute;left:24px;bottom:24px;display:flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid #ffffff42;border-radius:12px;background:#21172b9c;color:#fff;backdrop-filter:blur(14px)}
+.hero-photo-caption b,.hero-photo-caption small{display:block}.hero-photo-caption b{font-size:11px}.hero-photo-caption small{margin-top:4px;color:#e2d6e9;font-size:9px}
+.photo-caption-dot{width:8px;height:8px;border-radius:50%;background:#c65cf1;box-shadow:0 0 0 5px #c65cf128}
+.hero-photo-stamp{position:absolute;right:20px;top:20px;padding:13px 16px;border:1px solid #ffffff55;border-radius:10px;background:#ffffffdb;color:#382344;font-size:8px;font-weight:800;line-height:1.65;letter-spacing:.14em}
+.photo-showcase{padding:105px 0;background:#f4edf8}
+.photo-showcase-head{display:flex;justify-content:space-between;align-items:end;gap:35px;margin-bottom:35px}
+.photo-showcase-head h2{margin:18px 0 0;font-family:var(--font-serif),Georgia,serif;font-size:clamp(38px,5vw,62px);font-weight:500;line-height:1.03;letter-spacing:-.045em;color:#2a1d32}
+.photo-showcase-head h2 em{color:#9b35d1;font-style:normal}
+.photo-showcase-head>p{max-width:360px;margin:0 0 5px;color:#786c80;font-size:12px;line-height:1.85}
+.photo-showcase-grid{display:grid;grid-template-columns:1.15fr .85fr;grid-template-rows:245px 245px;gap:14px}
+.photo-card{position:relative;overflow:hidden;border-radius:15px;background-size:cover;background-position:center;isolation:isolate}
+.photo-card:before{content:"";position:absolute;z-index:-1;inset:0;background:inherit;background-size:cover;background-position:center;transform:scale(1.08);transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.photo-card:hover:before{transform:scale(1)}
+.photo-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#1c1228df 0%,#1c122800 75%)}
+.photo-card-large{grid-row:span 2}
+.photo-card-copy{position:absolute;z-index:1;left:25px;right:25px;bottom:24px;color:#fff}
+.photo-card-copy>span{font-size:8px;letter-spacing:.18em;color:#e4c7f4}
+.photo-card-copy h3{margin:10px 0 6px;font-family:var(--font-serif),Georgia,serif;font-size:clamp(23px,2.6vw,34px);font-weight:500}
+.photo-card-copy p{max-width:370px;margin:0;color:#e7deeb;font-size:10px;line-height:1.7}
+.proof-band{padding:50px 0;background:#24172e;color:#fff}
+.proof-band .container{display:flex;align-items:center;justify-content:space-between;gap:25px}
+.proof-band span{font-size:9px;letter-spacing:.2em;color:#d9a8f1;font-weight:800}
+.proof-band p{max-width:500px;margin:0;color:#e7dced;font-family:var(--font-serif),Georgia,serif;font-size:clamp(20px,2.5vw,29px)}
+/* Replace previous green accents with the supplied purple brand direction */
+:root{--sage:#a33be2;--sage-dark:#7410b8;--sage-pale:#f1e5fa;--paper:#fcf9fd;--paper-2:#f5edf9;--ink:#2b1e33;--ink-soft:#4c3c55;--muted:#7d7183;--line:#e7ddec}
+.eyebrow>span{background:#a33be2}.hero-copy h1 em,.intro-grid em,.display em,.heading em,.section-top h2 em,.outcomes-grid h2 em,.approach-heading h2 em,.principles-grid h2 em,.faq-grid h2 em,.closing-card h2 em{color:#9630d2}
+.button-primary{background:#7410b8;box-shadow:0 8px 22px #7410b822}.button-primary:hover{background:#5e0c98}.hero-proof i,.float-dot{background:#a33be2}.hero-bottom-line{background:#d2b5e4}.service-card-top svg,.service-arrow,.outcome-row>svg,.principles-list svg{color:#8b20c7}.service-art{background:radial-gradient(ellipse at center,#f1e5fa 0%,#f8f3fa 65%,#fbf9fc 100%)}.service-art-core{border-color:#d3b0e9;color:#7410b8}.service-art-orbit{border-color:#d9bce9}.service-tags span{background:#f4eafa;color:#7e4d9c}
+.site-header{background:#fcf9fdf0;border-bottom-color:#eee4f2}.brand-word b{color:#281c30}.brand-symbol{border-color:#d6b8e9;color:#7410b8}.brand-symbol span{color:#ba61e8}.site-footer{background:#f4edf8}.footer-bottom{border-color:#e4d8eb}.footer-grid nav a:hover{color:#7410b8}
+@media(max-width:900px){.hero-photo-frame{height:430px}.hero-art{min-height:450px}}
+@media(max-width:650px){.brand-full-logo{width:150px;height:49px}.brand-marquee{height:42px}.hero-art{min-height:355px;margin-top:8px;padding:0}.hero-photo-frame{height:350px;border-radius:16px 16px 16px 55px}.hero-photo-caption{left:13px;bottom:13px;padding:10px 12px}.hero-photo-stamp{right:12px;top:12px}.photo-showcase{padding:72px 0}.photo-showcase-head{display:block}.photo-showcase-head>p{margin-top:15px}.photo-showcase-grid{grid-template-columns:1fr;grid-template-rows:260px 220px 220px}.photo-card-large{grid-row:auto}.proof-band{padding:35px 0}.proof-band .container{display:block}.proof-band p{margin-top:12px}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){.marquee-track{animation:none}.hero-photo-image{transform:none!important}}
