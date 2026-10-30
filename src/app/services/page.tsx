@@ -1,0 +1,17 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { SectionHeading } from "@/components/section-heading";
+
+export const metadata: Metadata = { title: "Services", description: "Explore AI automation, agentic systems, customer support automation and custom software services from AsNexa Technologies.", alternates: { canonical: "/services" } };
+
+const services = [
+  { title: "AI Business Automation", text: "Connect everyday tools, reduce repetitive work and make important workflows easier to manage.", href: "/services/ai-business-automation", scope: "Workflow design, process automation, API integrations and reporting." },
+  { title: "AI Agents & Agentic Systems", text: "Build focused AI agents that can reason, use approved tools and complete well-defined tasks.", href: "/services/ai-agents", scope: "Tool use, orchestration, human approvals, retrieval and evaluations." },
+  { title: "AI Customer Support", text: "Help customers get useful answers faster while keeping people in control of complex conversations.", href: "/services/ai-customer-support", scope: "Knowledge-grounded assistants, channel experiences and escalation." },
+  { title: "Full-Stack Development", text: "Create fast, maintainable web applications and business platforms shaped around real user needs.", href: "/services/full-stack-development", scope: "Next.js applications, dashboards, APIs and integrations." },
+  { title: "AI-Powered Applications", text: "Turn a practical AI opportunity into a usable product, from a focused MVP to a connected platform.", href: "/services/ai-applications", scope: "AI-enabled SaaS, document workflows, intelligent search and custom interfaces." },
+];
+export default function ServicesPage() {
+ return <><section className="page-hero"><div className="container"><div className="eyebrow">Our services</div><h1 className="display mt-6 max-w-[850px]">Technology that solves <span className="text-blue">real work.</span></h1><p className="body-copy mt-6 max-w-[650px]">Choose a starting point, not a technology trend. We shape each engagement around the business problem, the people using the system and the outcome that matters.</p></div></section><section className="section"><div className="container"><SectionHeading eyebrow="Capabilities" title="Five ways to move your business forward." description="Services can stand alone or work together as part of a larger digital initiative."/><div className="mt-12 grid gap-4">{services.map((service,i)=><article key={service.href} className="card grid gap-6 p-6 md:grid-cols-[70px_1fr_1fr_auto] md:items-center md:p-8"><span className="text-xs tracking-widest text-[var(--blue)]">0{i+1}</span><div><h2 className="font-[family-name:var(--font-manrope)] text-xl font-semibold">{service.title}</h2><p className="mt-2 text-sm leading-7 text-[var(--steel)]">{service.text}</p></div><p className="text-xs leading-6 text-[var(--muted)]">{service.scope}</p><Link href={service.href} aria-label={"Explore " + service.title} className="flex h-10 w-10 items-center justify-center border border-[var(--border)] hover:border-[var(--blue)]"><ArrowUpRight size={17}/></Link></article>)}</div></div></section></>;
+}
