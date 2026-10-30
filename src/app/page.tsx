@@ -139,7 +139,7 @@ export default function Home() {
         <div className="container">
           <SectionHeading eyebrow="How we work" title="A clear path from problem to progress." description="Small, understandable steps. Shared decisions. No mystery handoffs." />
           <div className="mt-14 grid gap-7 sm:grid-cols-2 lg:grid-cols-5">
-            {process.map((item, i) => { const Icon = item.icon; return <div key={item.step} className="relative border-t border-[var(--border)] pt-6">
+            {process.map((item) => { const Icon = item.icon; return <div key={item.step} className="relative border-t border-[var(--border)] pt-6">
               <div className="absolute -top-[4px] left-0 h-[7px] w-[7px] rounded-full bg-[var(--blue)]"/>
               <div className="flex items-center justify-between"><span className="text-xs tracking-widest text-[var(--muted)]">{item.step}</span><Icon size={18} className="text-[var(--blue)]"/></div>
               <h3 className="mt-5 text-lg font-semibold">{item.title}</h3><p className="mt-3 text-sm leading-7 text-[var(--muted)]">{item.detail}</p>
