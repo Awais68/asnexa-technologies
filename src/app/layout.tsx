@@ -3,6 +3,7 @@ import { DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { BrandMarquee } from "@/components/brand-marquee";
 
 const inter = DM_Sans({ variable: "--font-inter", subsets: ["latin"], display: "swap" });
 const serif = Playfair_Display({ variable: "--font-serif", subsets: ["latin"], display: "swap" });
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" className={`${inter.variable} ${serif.variable}`}>
       <body>
         <SiteHeader />
+        <BrandMarquee />
         <main>{children}</main>
         <SiteFooter />
       </body>
