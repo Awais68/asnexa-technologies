@@ -1,35 +1,7 @@
 "use client";
-
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowUpRight, Menu, X } from "lucide-react";
-
-const links = [
-  { href: "/services", label: "Services" },
-  { href: "/industries", label: "Industries" },
-  { href: "/work", label: "Our approach" },
-  { href: "/about", label: "About" },
-];
-
-export function SiteHeader() {
-  const [open, setOpen] = useState(false);
-  return (
-    <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[#14171deF] backdrop-blur-xl">
-      <div className="container flex h-[76px] items-center justify-between">
-        <Link href="/" aria-label="AsNexa Technologies home" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <span className="flex h-9 w-9 items-center justify-center border border-[#477bff80] bg-[#172b50] font-[family-name:var(--font-manrope)] text-sm font-bold text-white">A<span className="text-[var(--blue)]">N</span></span>
-          <span className="leading-tight"><span className="block font-[family-name:var(--font-manrope)] text-[15px] font-bold tracking-tight">AsNexa</span><span className="block text-[9px] font-semibold tracking-[.2em] text-[var(--muted)]">TECHNOLOGIES</span></span>
-        </Link>
-        <nav aria-label="Main navigation" className="hidden items-center gap-8 md:flex">
-          {links.map(link => <Link key={link.href} href={link.href} className="text-xs font-medium text-[var(--steel)] transition-colors hover:text-white">{link.label}</Link>)}
-        </nav>
-        <div className="hidden md:block"><Link href="/contact" className="button-primary min-h-[43px] px-4">Book a discovery call <ArrowUpRight size={14}/></Link></div>
-        <button type="button" aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open} onClick={() => setOpen(v => !v)} className="flex h-10 w-10 items-center justify-center border border-[var(--border)] text-[var(--ice)] md:hidden">{open ? <X size={19}/> : <Menu size={19}/>}</button>
-      </div>
-      {open ? <nav aria-label="Mobile navigation" className="border-t border-[var(--border)] bg-[var(--obsidian)] px-5 py-4 md:hidden">
-        {links.map(link => <Link key={link.href} href={link.href} onClick={() => setOpen(false)} className="block border-b border-[var(--border)] py-4 text-sm text-[var(--steel)]">{link.label}</Link>)}
-        <Link href="/contact" onClick={() => setOpen(false)} className="button-primary mt-4 w-full">Book a discovery call <ArrowUpRight size={14}/></Link>
-      </nav> : null}
-    </header>
-  );
-}
+const links=[{href:"/services",label:"Services"},{href:"/industries",label:"Industries"},{href:"/work",label:"Our approach"},{href:"/about",label:"About"}];
+export function SiteHeader(){const[open,setOpen]=useState(false);return <header className="site-header"><div className="container header-inner"><Link href="/" aria-label="AsNexa Technologies home" className="brand" onClick={()=>setOpen(false)}><span className="brand-symbol">A<span>N</span></span><span className="brand-word"><b>AsNexa</b><small>TECHNOLOGIES</small></span></Link><nav aria-label="Main navigation" className="desktop-nav">{links.map(x=><Link key={x.href} href={x.href}>{x.label}</Link>)}</nav><Link href="/contact" className="button-primary header-cta">Book a discovery call <ArrowUpRight size={14}/></Link><button className="mobile-toggle" type="button" aria-label={open?"Close navigation":"Open navigation"} aria-expanded={open} onClick={()=>setOpen(v=>!v)}>{open?<X size={20}/>:<Menu size={20}/>}</button></div>{open&&<nav className="mobile-nav" aria-label="Mobile navigation">{links.map(x=><Link key={x.href} href={x.href} onClick={()=>setOpen(false)}>{x.label}</Link>)}<Link href="/contact" className="button-primary" onClick={()=>setOpen(false)}>Book a discovery call <ArrowUpRight size={14}/></Link></nav>}</header>}
+\n<style jsx global>{`.site-header{position:sticky;top:0;z-index:50;border-bottom:1px solid #e5e9e1;background:#fafaf4eF;backdrop-filter:blur(18px)}.header-inner{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px}.brand-symbol{display:grid;place-items:center;width:34px;height:34px;border:1px solid #b7c8b4;border-radius:11px;color:#496b55;font-family:var(--font-serif);font-size:17px}.brand-symbol span{color:#8da68a}.brand-word b,.brand-word small{display:block}.brand-word b{font-family:var(--font-serif);font-size:17px;font-weight:600;letter-spacing:-.04em}.brand-word small{margin-top:1px;color:#879389;font-size:7px;font-weight:700;letter-spacing:.2em}.desktop-nav{display:flex;gap:32px}.desktop-nav a{color:#66746a;font-size:10px;font-weight:600;transition:color .2s}.desktop-nav a:hover{color:#304d38}.header-cta{min-height:40px;padding:0 16px;font-size:9px}.mobile-toggle{display:none;border:1px solid var(--line);border-radius:10px;background:white;width:40px;height:40px;color:var(--ink)}.mobile-nav{display:none}@media(max-width:650px){.header-inner{height:64px}.desktop-nav,.header-cta{display:none}.mobile-toggle{display:grid;place-items:center}.mobile-nav{display:grid;gap:0;padding:8px 20px 18px;background:var(--paper);border-top:1px solid var(--line)}.mobile-nav>a:not(.button-primary){padding:14px 0;border-bottom:1px solid var(--line);font-size:13px}.mobile-nav .button-primary{margin-top:15px}}`}</style>
