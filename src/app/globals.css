@@ -22,3 +22,5 @@
 .footer-grid{grid-template-columns:1.3fr .7fr .9fr .7fr}
 .input-field{display:block;width:100%;min-height:46px;padding:12px 13px;border:1px solid #e6d9ec;border-radius:9px;background:#fff;color:#33243b;font-size:12px;outline:none}.input-field:focus{border-color:#a33be2;box-shadow:0 0 0 3px #a33be21c}.input-field::placeholder{color:#b2a6b8}.site-footer .brand{width:max-content}
 @media(max-width:650px){.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}}
+
+:root{--blue:#9630d2;--blue-soft:#f1e5fa;--ice:#33243b;--steel:#756b7d;--border:#e7ddec;--surface:#fff}
