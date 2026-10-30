@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
+import { DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
-const inter = Inter({ variable: "--font-inter", subsets: ["latin"], display: "swap" });
-const manrope = Manrope({ variable: "--font-manrope", subsets: ["latin"], display: "swap" });
+const inter = DM_Sans({ variable: "--font-inter", subsets: ["latin"], display: "swap" });
+const serif = Playfair_Display({ variable: "--font-serif", subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://asnexatech.com"),
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
+    <html lang="en" className={`${inter.variable} ${serif.variable}`}>
       <body>
         <SiteHeader />
         <main>{children}</main>
