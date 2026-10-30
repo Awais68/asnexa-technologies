@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Bot, Workflow, Headphones, Code2, Boxes, Check, Sparkles } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Bot, Workflow, Headphones, Code2, Boxes, Check } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { HeroPhoto } from "@/components/hero-photo";
 import { PhotoShowcase } from "@/components/photo-showcase";
@@ -40,13 +40,8 @@ export default function Home() {
           <Reveal delay={0.22}><div className="hero-actions"><Link href="/contact" className="button-primary">Let&apos;s talk <ArrowUpRight size={16}/></Link><Link href="/services" className="text-link">Explore our services <ArrowRight size={15}/></Link></div></Reveal>
           <Reveal delay={0.28}><div className="hero-proof"><span><i/> Business-first thinking</span><span>Human-led, AI-enabled</span><span>Built for real workflows</span></div></Reveal>
         </div>
-        <div className="hero-art">
-          <HeroPhoto />
-          <div className="hero-art-label"><span className="label-mark"><Sparkles size={15}/></span><span><b>Intelligence, in motion</b><small>Connected systems. Clear outcomes.</small></span></div>
-          <div className="hero-float hero-float-top"><span className="float-dot"/> Systems connected</div>
-          <div className="hero-float hero-float-bottom">Designed around people <span>↗</span></div>
-        </div>
-      </div>
+        <div className="hero-art"><HeroPhoto /></div>
+    </div>
       <div className="container hero-bottom"><span>FROM OPERATIONAL FRICTION</span><span className="hero-bottom-line"/><span>TO MEANINGFUL PROGRESS</span></div>
     </section>
 
