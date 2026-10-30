@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   description:
     "AsNexa Technologies helps businesses streamline operations with AI automation, intelligent agents, customer support systems and custom software development.",
   applicationName: "AsNexa Technologies",
+  icons: { icon: "/asnexa-mark.svg", shortcut: "/asnexa-mark.svg" },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
